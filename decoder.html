@@ -173,6 +173,7 @@
                             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                             alt="express" width="40" height="40" /> </a>
             
+<<<<<<< HEAD
                     <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img
                             src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40"
                             height="40" /> </a>
@@ -245,6 +246,49 @@
                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
                 alt="linux" width="40" height="40" /> </a> 
                 
+=======
+            for (let i = 0; i < entrada.length; i++) {
+                switch (entrada[i]) {
+                    case 'a':
+                        //console.log("ai");
+                        resultado = resultado.concat("ai")
+                        break
+                        case 'e':
+                            //console.log("enter");
+                            resultado = resultado.concat("enter")
+                            break
+                            case 'i':
+                                //console.log("imes");
+                                resultado = resultado.concat("imes")
+                                break
+                                case 'o':
+                        //console.log("ober");
+                        resultado = resultado.concat("ober")
+                        break
+                        case 'u':
+                            //console.log("ufat");
+                            resultado = resultado.concat("ufat")
+                            break
+                            default:
+                                resultado = resultado.concat(entrada[i])
+                                //console.log(entrada[i]);
+                                break
+                            }
+                        }
+                        return resultado
+                    }
+                    
+                    function decoderText(entrada){
+                        let result =""
+                        let llaves = ["ai","enter","imes","ober","ufat"]
+                        let claves = ["a","e","i","o","u"]
+                        for (let i = 0; i < llaves.length; i++) {   
+                            result = entrada.replaceAll(llaves[i], claves[i])
+                            entrada = result
+                        }
+                        return result
+                    }
+>>>>>>> bdc1f231fb773adac837529306ad7e8023fbc5cb
 
 
 
