@@ -7,37 +7,51 @@
     <title>Encriptador Oracle</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
-   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
 </head>
 <body>
     
-    <div>
+<div class="main">
+    <div class="titulo">
         <img src="logo.png" height="48px" width="120px" alt="logo-alura">
+    </div> 
+
+    <div class="entrada">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui" class="txt-input" autofocus></textarea>
     </div>
-<div>
-    <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui" class="txt-input" autofocus></textarea>
-</div>
-<div class="div-result">
-    <img src="imagen2.png" alt="dem" >
+
+    <div class="resultado">
+        <img src="imagen2.png" alt="dem" >
         <p id="p1">Ningun mensaje fue encontrado</p>
         <p id="p2">Ingresa el texto que desees ecnriptar o Desencriptar</p>    
+    </div>
+
+    <div class="spani">  
+        <i class="fa fa-exclamation-circle"></i>
+        <span>Solo letras minusculas y sin acentos</span>
+    </div>
+
+    <div class="botones">
+        <br>
+        <button type="submit" class="btn-blue">Encriptar</button>
+        <br>
+        <button type="submit" class="btn-light" >Desencriptar</button>
+    </div>
+
+    <div class="creditos">
+        <a href="https://github.com/macluna94">
+            <i class="fab fa-github" style='font-size:30px'></i>
+            <br> MacLuna94
+        </a>
+         <a href="https://stackoverflow.com/">
+             <i class="fab fa-linkedin" style='font-size:30px'></i>
+             <br>
+             Manuel Luna
+            </a>
+        <p>Copyright © 2022 MacLuna - Website Design by Manuel Luna</p>
+
+    </div>
 </div>
-
-<div class="div-span">  
-    <i class="fa-solid fa-circle-exclamation"></i>
-    <span>Solo letras minusculas y sin acentos</span>
-</div>
-
-<div class="div-btns">
-    <br>
-    <button type="submit" class="btn-blue">Encriptar</button>
-    <br>
-    <button type="submit" class="btn-light" >Desencriptar</button>
-</div>
-
-
-
-
 </body>
 </html>

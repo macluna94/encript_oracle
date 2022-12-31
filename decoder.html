@@ -74,20 +74,10 @@
                         let result =""
                         let llaves = ["ai","enter","imes","ober","ufat"]
                         let claves = ["a","e","i","o","u"]
-
-                        for (let i = 0; i < llaves.length; i++) {
-                            
+                        for (let i = 0; i < llaves.length; i++) {   
                             result = entrada.replaceAll(llaves[i], claves[i])
-                            
-                            //console.log(i)
-                            //console.log(claves[i] + " - " +llaves[i]);
-                            //console.log(result)
                             entrada = result
                         }
-
-
-                        //result = entrada.replace("ober", "o")
-                        
                         return result
                     }
 
