@@ -15,6 +15,92 @@
             font-weight: 700;
         }
     </style>
+        <script>
+            //var entrada = "HOLA"// document.getElementById("entrada");
+            var ent2 = "gaitaiober"
+            
+            function encoderText() {
+                let resultado = ''
+                var entrada = document.getElementById("entrada").value;
+                var parra = document.getElementById("salida")
+                entrada = filtrotxt(entrada)
+                entrada = entrada.toLowerCase()
+    
+                for (let i = 0; i < entrada.length; i++) {
+                    switch (entrada[i]) {
+                        case 'a':
+                            //console.log("ai");
+                            resultado = resultado.concat("ai")
+                            break
+                        case 'e':
+                            //console.log("enter");
+                            resultado = resultado.concat("enter")
+                            break
+                        case 'i':
+                            //console.log("imes");
+                            resultado = resultado.concat("imes")
+                            break
+                        case 'o':
+                            //console.log("ober");
+                            resultado = resultado.concat("ober")
+                            break
+                        case 'u':
+                            //console.log("ufat");
+                            resultado = resultado.concat("ufat")
+                            break
+                        default:
+                            resultado = resultado.concat(entrada[i])
+                            //console.log(entrada[i]);
+                            break
+                    }
+                }
+                console.log(resultado);
+                parra.innerHTML= resultado
+                return resultado
+            }
+    
+            function decoderText() {
+                let entrada = document.getElementById("salida").textContent
+                let result = ""
+                let llaves = ["ai", "enter", "imes", "ober", "ufat"]
+                let claves = ["a", "e", "i", "o", "u"]
+    
+                for (let i = 0; i < llaves.length; i++) {
+    
+                    result = entrada.replaceAll(llaves[i], claves[i])
+    
+                    //console.log(i)
+                    //console.log(claves[i] + " - " +llaves[i]);
+                    //console.log(result)
+                    entrada = result
+                }
+    
+    
+                //result = entrada.replace("ober", "o")
+    
+                console.log(result)
+            }
+    
+    
+    
+    
+            //console.log(encoderText());
+    
+            //console.log(decoderText("Emoción"));
+    
+    
+    
+            function filtrotxt(texto) {
+                let cadena = ""
+                cadena = texto.replaceAll("ó", "o")
+    
+                return cadena
+            }
+    
+    
+    
+    
+        </script>
 </head>
 
 <body>
@@ -22,12 +108,20 @@
     <label for="entrada">
         Entrada de texto
     </label>
+
     <br><br>
-    <input type="text" name="entrada" id="entrada" autofocus>
+    <textarea name="entrada" id="entrada"  value=""  autofocus> </textarea>
+    <button onclick="encoderText();" type="submit" >Encriptar</button>
+
+
     <br><br><br>
     <label for="">Salida</label>
     <br>
-    <p id="salida">Aqui va el resultado</p>
+    <p id="salida" name="salida">Aqui va el resultado</p>
+    <button onclick="decoderText()">Decodificar</button>
+
+
+
 
 
     <h3 align="left">Languages and Tools:</h3>
@@ -160,88 +254,8 @@
 
 
 
-    <script>
-        var ent = "Mac Luna"
-        var ent2 = "gaitaiober"
 
 
-        function encoderText(entrada) {
-            let resultado = ''
-            entrada = filtrotxt(entrada)
-            entrada = entrada.toLowerCase()
-
-            for (let i = 0; i < entrada.length; i++) {
-                switch (entrada[i]) {
-                    case 'a':
-                        //console.log("ai");
-                        resultado = resultado.concat("ai")
-                        break
-                    case 'e':
-                        //console.log("enter");
-                        resultado = resultado.concat("enter")
-                        break
-                    case 'i':
-                        //console.log("imes");
-                        resultado = resultado.concat("imes")
-                        break
-                    case 'o':
-                        //console.log("ober");
-                        resultado = resultado.concat("ober")
-                        break
-                    case 'u':
-                        //console.log("ufat");
-                        resultado = resultado.concat("ufat")
-                        break
-                    default:
-                        resultado = resultado.concat(entrada[i])
-                        //console.log(entrada[i]);
-                        break
-                }
-            }
-            return resultado
-        }
-
-        function decoderText(entrada) {
-            let result = ""
-            let llaves = ["ai", "enter", "imes", "ober", "ufat"]
-            let claves = ["a", "e", "i", "o", "u"]
-
-            for (let i = 0; i < llaves.length; i++) {
-
-                result = entrada.replaceAll(llaves[i], claves[i])
-
-                //console.log(i)
-                //console.log(claves[i] + " - " +llaves[i]);
-                //console.log(result)
-                entrada = result
-            }
-
-
-            //result = entrada.replace("ober", "o")
-
-            return result
-        }
-
-
-
-
-        console.log(encoderText("Emoción"));
-
-        console.log(decoderText("Emoción"));
-
-
-
-        function filtrotxt(texto) {
-            let cadena = ""
-            cadena = texto.replaceAll("ó", "o")
-
-            return cadena
-        }
-
-
-
-
-    </script>
 </body>
 
 </html>
