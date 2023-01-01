@@ -1,3 +1,4 @@
+
 span {
     color: #495057;
     box-sizing: border-box;
@@ -115,6 +116,11 @@ textarea:focus {
         order: 0;
         flex-grow: 0;
     }
+    .btn-blue:hover {
+       font-weight: 400;
+        opacity: 0.7;
+    }
+
 
     .btn-light {
 
@@ -140,6 +146,11 @@ textarea:focus {
         order: 1;
         flex-grow: 0;
     }
+    .btn-light:hover{
+        font-weight: 400;
+        opacity: 0.7;
+    }
+
     .entrada {
         grid-area: entrada;
         align-self: center;
@@ -155,6 +166,9 @@ textarea:focus {
         text-align: center;
         justify-items: center;
         align-items: center;
+    }
+    .pnull {
+        display: none;
     }
 
     .resultado #p1 {
@@ -180,7 +194,14 @@ textarea:focus {
         align-self: stretch;
         flex-grow: 0;
     }
-
+    .psalida {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #495057;
+        margin-top: 50%;
+ 
+    }
     .spani {
         grid-area: spani;
         align-self: end;
